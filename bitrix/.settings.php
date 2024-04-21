@@ -35,7 +35,7 @@ return array(
                     'assertion_error_type' => 256,
                     'log' => array(                             // настройки для логирования, свой логгер
                         'class_name' => 'MyLog',
-                        'required_file' => 'logging/MyLog.php',
+                        'required_file' => 'classes/MyLog.php',
                         'settings' =>
                             array(
                                 'file' => 'local/logs/error.log',
