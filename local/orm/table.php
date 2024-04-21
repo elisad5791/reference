@@ -26,10 +26,14 @@ $fields = [
 $result = BookTable::add($fields);
 if ($result->isSuccess()) {
     $id = $result->getId();
+} else {
+    $errors = $result->getErrorMessages();
 }
 Debug::dump($id, 'id');
+Debug::dump($errors, 'errors');
 /*
 id=int(1)
+errors=NULL
 */
 
 /*--- обновление записи -------------------------------------*/
