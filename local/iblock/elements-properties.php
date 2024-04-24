@@ -62,3 +62,17 @@ Debug::dump($xml, 'xml');
 value=string(15) "В работе"
 xml=string(4) "work"
 */
+
+/*--- поле типа привязка к элементам множественное --------------------*/
+$elementId = 33;
+$select = ['ID', 'PROCEDURES.ELEMENT'];
+$element = ElementAutoTable::getByPrimary($elementId, ['select' => $select])->fetchObject();
+$procedures = $element->getProcedures()->getAll();
+foreach ($procedures as $procedure) {
+    $name = $procedure->getElement()->getName();
+    Debug::dump($name);
+}
+/*
+string(22) "Диагностика"
+string(31) "Коррекция"
+*/
