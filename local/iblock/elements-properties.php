@@ -65,14 +65,19 @@ xml=string(4) "work"
 
 /*--- поле типа привязка к элементам множественное --------------------*/
 $elementId = 33;
-$select = ['ID', 'PROCEDURES.ELEMENT'];
+$select = ['ID', 'PROCEDURES.ELEMENT', 'PROCEDURES.ELEMENT.PRICE'];
 $element = ElementAutoTable::getByPrimary($elementId, ['select' => $select])->fetchObject();
 $procedures = $element->getProcedures()->getAll();
 foreach ($procedures as $procedure) {
-    $name = $procedure->getElement()->getName();
+    $elem = $procedure->getElement();
+    $name = $elem->getName();
+    $price = $elem->getPrice()->getValue();
     Debug::dump($name);
+    Debug::dump($price);
 }
 /*
 string(22) "Диагностика"
+string(4) "1000"
 string(31) "Коррекция"
+string(4) "2000"
 */
