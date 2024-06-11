@@ -6,13 +6,13 @@ use Bitrix\Main\Page\Asset;
 Extension::load('ui.buttons');
 Extension::load('ui.buttons.icons');
 
-CJSCore::RegisterExt('elisad', [
-    'js' => '/local/js/elisad.js',
-    'lang' => '/local/lang/' . LANGUAGE_ID . '/elisad.php',
-    'css' => '/local/css/elisad.css',
+CJSCore::RegisterExt('example', [
+    'js' => '/local/js/example.js',
+    'lang' => '/local/lang/' . LANGUAGE_ID . '/example.php',
+    'css' => '/local/css/example.css',
     'rel' => ['popup']
 ]);
-CJSCore::Init(['elisad']);
+CJSCore::Init(['example']);
 
 $asset = Asset::getInstance();
 $page = $APPLICATION->GetCurPage();
