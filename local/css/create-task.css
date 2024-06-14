@@ -1,0 +1,5 @@
+.ui-btn-split.tasks-interface-filter-btn-add.ui-btn-success #tasks-buttonAdd,
+.ui-btn-split.tasks-interface-filter-btn-add.ui-btn-success #tasks-popupMenuAdd {
+    background-color: #ff0000;
+    border-color: #ff0000;
+}
