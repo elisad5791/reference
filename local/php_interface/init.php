@@ -5,3 +5,4 @@ include_once __DIR__ . '/include/functions.php';
 require_once __DIR__ . '/include/custom.php';
 require_once __DIR__ . '/include/events.php';
 require_once __DIR__ . '/include/customization.php';
+require_once __DIR__ . '/include/facts.php';
