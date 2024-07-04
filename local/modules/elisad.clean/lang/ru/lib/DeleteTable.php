@@ -1,5 +1,0 @@
-<?php
-$MESS['DELETE_ENTITY_ID_FIELD'] = 'ID';
-$MESS['DELETE_ENTITY_DATE_FIELD'] = 'Дата';
-$MESS['DELETE_ENTITY_TIP_FIELD'] = 'Тип действий';
-$MESS['DELETE_ENTITY_PATH_FIELD'] = 'Путь';
